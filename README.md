@@ -8,8 +8,8 @@ git clone https://github.com/thatcoderguy/openshift-3.11-CentOS-9
 cd openshift-ansible
 
 sudo pip install -r requirements.txt
-
-pip install pyopenssl --upgrade
+sudo pip install Jinja2
+sudo pip install pyopenssl --upgrade
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
