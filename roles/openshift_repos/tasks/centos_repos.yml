@@ -32,3 +32,9 @@
     src: "Docker.repo.j2"
     dest: "/etc/yum.repos.d/Docker.repo"
   notify: refresh cache
+
+- name: Configure correct Atomic repository
+  template:
+    src: "Atomic.repo.j2"
+    dest: "/etc/yum.repos.d/Atomic.repo"
+  notify: refresh cache
