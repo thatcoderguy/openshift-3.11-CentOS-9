@@ -21,8 +21,7 @@
   package:
     name: "docker"
     state: present
-    disablerepo: "*"
-    enablerepo: "docker-ce-stable"
+    repo: "docker-ce-stable"
   when:
   - not (openshift_is_atomic | bool)
   register: result
