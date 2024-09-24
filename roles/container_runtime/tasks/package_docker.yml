@@ -17,19 +17,10 @@
 # Some basic checks to ensure the role will complete
 - import_tasks: docker_sanity.yml
 
-- name: Install Docker
-  package:
-    name: "docker"
-    state: present
-  when:
-  - not (openshift_is_atomic | bool)
-  register: result
-  until: result is succeeded
-
 # Make sure Docker is installed, but does not update a running version.
 # Docker upgrades are handled by a separate playbook.
 # Note: The curr_docker_version.stdout check can be removed when https://github.com/ansible/ansible/issues/33187 gets fixed.
-- name: Install Atomic
+- name: Install Docker
   package:
     name: "{{ pkg_list | join(',') }}"
     state: present
@@ -39,6 +30,7 @@
   until: result is succeeded
   vars:
     pkg_list:
+    - "docker{{ '-' + docker_version if docker_version is defined else '' }}"
     - atomic
     - skopeo
 
