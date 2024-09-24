@@ -9,6 +9,8 @@ cd openshift-ansible
 
 sudo pip install -r requirements.txt
 
+sudo pip install union
+
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
 
