@@ -14,6 +14,7 @@ sudo pip install pyopenssl --upgrade
 sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/os/Packages/openssl-libs-3.2.1-1.el9.i686.rpm
 sudo yum install https://rpmfind.net/linux/opensuse/distribution/leap/15.6/repo/oss/x86_64/libopenssl10-1.0.2p-150000.3.91.1.x86_64.rpm
 sudo yum install https://rpmfind.net/linux/atrpms/el5-x86_64/atrpms/stable/libpth20-2.0.7-6.0.el5.x86_64.rpm
+sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/os/Packages/gpgme-1.15.1-5.el9.x86_64.rpm
 sudo yum install https://rpmfind.net/linux/atrpms/el5-x86_64/atrpms/stable/libgpgme-pthread11-1.1.6-22.el5.x86_64.rpm
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
