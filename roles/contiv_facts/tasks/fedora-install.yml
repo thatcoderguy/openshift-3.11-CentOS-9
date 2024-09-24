@@ -1,0 +1,26 @@
+---
+- name: Install dnf
+  yum:
+    name: dnf
+    state: installed
+  register: result
+  until: result is succeeded
+
+- name: Update repo cache
+  command: dnf update -y
+  retries: 5
+  delay: 10
+  environment:
+    https_proxy: "{{ contiv_https_proxy }}"
+    http_proxy: "{{ contiv_http_proxy }}"
+    no_proxy: "{{ contiv_no_proxy }}"
+
+- name: Install python3-libselinux
+  command: dnf install {{ item }} -y
+  with_items:
+    - python-dnf
+    - python3-libselinux
+  environment:
+    https_proxy: "{{ contiv_https_proxy }}"
+    http_proxy: "{{ contiv_http_proxy }}"
+    no_proxy: "{{ contiv_no_proxy }}"
