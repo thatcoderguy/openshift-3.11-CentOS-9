@@ -27,7 +27,7 @@
     state: present
   notify: refresh cache
 
-  - name: Enable the EPEL 7 repo for installing Atomic
+- name: Enable the EPEL 7 repo for installing Atomic
   yum:
     src: "EPEL-7.repo.j2"
     dest: "/etc/yum.repos.d/EPEL-7.repo"
