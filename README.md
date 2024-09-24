@@ -8,7 +8,7 @@ git clone https://github.com/thatcoderguy/openshift-3.11-CentOS-9
 cd openshift-ansible
 
 sudo pip install -r requirements.txt
-sudo pip install Jinja2
+sudo pip install jinja2=2.11.3   **MIGHT NOT NEED THIS
 sudo pip install pyopenssl --upgrade
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
