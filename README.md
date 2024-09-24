@@ -16,6 +16,7 @@ sudo yum install https://rpmfind.net/linux/opensuse/distribution/leap/15.6/repo/
 sudo yum install https://rpmfind.net/linux/atrpms/el5-x86_64/atrpms/stable/libpth20-2.0.7-6.0.el5.x86_64.rpm
 sudo yum install https://rpmfind.net/linux/dag/redhat/el5/en/x86_64/dag/RPMS/gpgme-1.1.8-1.el5.rf.x86_64.rpm
 sudo yum install https://rpmfind.net/linux/atrpms/el5-x86_64/atrpms/stable/libgpgme-pthread11-1.1.6-22.el5.x86_64.rpm
+sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/os/Packages/python3-gpg-1.15.1-5.el9.x86_64.rpm
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
