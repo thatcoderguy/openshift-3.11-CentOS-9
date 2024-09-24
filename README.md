@@ -19,6 +19,7 @@ sudo yum install https://rpmfind.net/linux/atrpms/el5-x86_64/atrpms/stable/libgp
 sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/os/Packages/python3-gpg-1.15.1-5.el9.x86_64.rpm
 sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/os/Packages/python3-3.9.19-8.el9.x86_64.rpm
 sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/x86_64/main/release/python-pyyaml-6.0-2-omv4090.x86_64.rpm
+sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/x86_64/main/release/python-slip-0.6.5-4-omv4090.noarch.rpm
 sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/aarch64/main/release/python-slip-dbus-0.6.5-4-omv4090.noarch.rpm
 
 
