@@ -26,8 +26,6 @@
       name: "https://kojipkgs.fedoraproject.org//packages/origin/3.11.2/8.fc37/noarch/origin-docker-excluder-3.11.2-8.fc37.noarch.rpm"
       state: "{{ r_openshift_excluder_docker_package_state }}"
       disable_gpg_check: true
-      sslverify: false
-      validate_certs: false
     when:
     - r_openshift_excluder_enable_docker_excluder | bool
     - ansible_pkg_mgr == "dnf"
@@ -53,8 +51,6 @@
       name: "{{ r_openshift_excluder_service_type }}-excluder{{ openshift_pkg_version | default('') | lib_utils_oo_image_tag_to_rpm_version(include_dash=True) }}"
       state: "{{ r_openshift_excluder_package_state }}"
       disable_gpg_check: true
-      sslverify: false
-      validate_certs: false
     when:
     - r_openshift_excluder_enable_openshift_excluder | bool
     - ansible_pkg_mgr == "dnf"
