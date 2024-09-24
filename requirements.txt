@@ -14,3 +14,4 @@ pyrsistent==0.16.1
 msgpack==1.0.3
 jsonschema<=3.2.0 ; python_version < '3.0'
 jinja2==2.11.3
+markupsafe==2.0.1
