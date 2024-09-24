@@ -11,6 +11,8 @@ sudo pip install -r requirements.txt
 sudo pip install jinja2=2.11.3   **MIGHT NOT NEED THIS
 sudo pip install pyopenssl --upgrade
 
+sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/os/Packages/openssl-libs-3.2.1-1.el9.i686.rpm
+
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
 
