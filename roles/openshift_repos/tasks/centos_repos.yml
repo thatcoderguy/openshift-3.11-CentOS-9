@@ -28,7 +28,7 @@
   notify: refresh cache
 
 - name: Enable the EPEL 7 repo for installing Atomic
-  yum:
+  template:
     src: "EPEL-7.repo.j2"
     dest: "/etc/yum.repos.d/EPEL-7.repo"
   notify: refresh cache
