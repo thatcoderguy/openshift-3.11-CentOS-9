@@ -41,6 +41,9 @@ sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/x86_64/ma
 
 sudo yum install https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive01/packages/python-ipaddress/1.0.7/3.fc22/noarch/python-ipaddress-1.0.7-3.fc22.noarch.rpm
 
+sudo yum install https://www.python.org/ftp/python/2.3/rpms/redhat-9/python2.3-2.3-5pydotorg.i386.rpm  **enable /etc/yum.repo.d/rpmfinder.repo first
+sudo yum install https://rpmfind.net/linux/atrpms/sl4-x86_64/atrpms/stable/pythonabi-2.3-3.el4.at.x86_64.rpm
+sudo yum install https://rpmfind.net/linux/atrpms/el4-x86_64/atrpms/stable/rpm-python-4.4.2-15.2_60.el4.at.x86_64.rpm
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
