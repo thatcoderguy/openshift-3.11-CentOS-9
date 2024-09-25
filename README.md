@@ -21,6 +21,7 @@ sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/
 sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/x86_64/main/release/python-pyyaml-6.0-2-omv4090.x86_64.rpm
 sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/x86_64/main/release/python-slip-0.6.5-4-omv4090.noarch.rpm
 sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/aarch64/main/release/python-slip-dbus-0.6.5-4-omv4090.noarch.rpm
+sudo yum install https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive04/packages/python-ipaddress/1.0.18/7.fc31/noarch/python2-ipaddress-1.0.18-7.fc31.noarch.rpm
 
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
