@@ -39,8 +39,8 @@
     dest: "/etc/yum.repos.d/Docker.repo"
   notify: refresh cache
 
-- name: Configure correct RPM Finder repository
-  template:
-    src: "RPMFinder.repo.j2"
-    dest: "/etc/yum.repos.d/rpmfinder.repo"
-  notify: refresh cache
+#- name: Configure correct RPM Finder repository
+#  template:
+#    src: "RPMFinder.repo.j2"
+#    dest: "/etc/yum.repos.d/rpmfinder.repo"
+#  notify: refresh cache
