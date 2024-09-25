@@ -30,7 +30,7 @@
   until: result is succeeded
   vars:
     pkg_list:
-    - "docker{{ '-' + docker_version if docker_version is defined else '' }}"
+    - "docker-ce"
     - atomic
     - skopeo
 
