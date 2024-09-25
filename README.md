@@ -21,6 +21,13 @@ sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/
 sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/x86_64/main/release/python-pyyaml-6.0-2-omv4090.x86_64.rpm
 sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/x86_64/main/release/python-slip-0.6.5-4-omv4090.noarch.rpm
 sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/aarch64/main/release/python-slip-dbus-0.6.5-4-omv4090.noarch.rpm
+
+sudo yum install https://rpmfind.net/linux/fedora/linux/releases/39/Everything/x86_64/os/Packages/g/glibc-all-langpacks-2.38-7.fc39.x86_64.rpm
+sudo yum install https://rpmfind.net/linux/fedora/linux/releases/39/Everything/x86_64/os/Packages/g/glibc-2.38-7.fc39.x86_64.rpm
+sudo yum install https://rpmfind.net/linux/fedora/linux/releases/39/Everything/x86_64/os/Packages/g/glibc-common-2.38-7.fc39.x86_64.rpm
+sudo yum install https://rpmfind.net/linux/fedora/linux/releases/39/Everything/x86_64/os/Packages/g/glibc-2.38-7.fc39.i686.rpm
+sudo yum install https://rpmfind.net/linux/opensuse/tumbleweed/repo/oss/x86_64/libpython2_7-1_0-2.7.18-49.1.x86_64.rpm
+sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/x86_64/main/release/python2-2.7.18-5-omv2390.x86_64.rpm
 sudo yum install https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive04/packages/python-ipaddress/1.0.18/7.fc31/noarch/python2-ipaddress-1.0.18-7.fc31.noarch.rpm
 
 
