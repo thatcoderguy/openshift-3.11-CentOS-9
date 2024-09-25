@@ -39,7 +39,7 @@ sudo yum install https://rpmfind.net/linux/opensuse/tumbleweed/repo/oss/x86_64/l
 
 sudo yum install https://rpmfind.net/linux/openmandriva/5.0/repository/x86_64/main/release/python2-2.7.18-5-omv2390.x86_64.rpm
 
-sudo yum install https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive04/packages/python-ipaddress/1.0.18/7.fc31/noarch/python2-ipaddress-1.0.18-7.fc31.noarch.rpm
+sudo yum install https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive01/packages/python-ipaddress/1.0.7/3.fc22/noarch/python-ipaddress-1.0.7-3.fc22.noarch.rpm
 
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
