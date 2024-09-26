@@ -17,7 +17,7 @@
 # Some basic checks to ensure the role will complete
 - import_tasks: docker_sanity.yml
 
-- name: Configure correct RPM Finder repository
+- name: Enable  RPM Finder repository
   template:
     src: "RPMFinder.repo.j2"
     dest: "/etc/yum.repos.d/rpmfinder.repo"
@@ -42,7 +42,7 @@
     - atomic
     - skopeo
 
-- name: Configure correct RPM Finder repository
+- name: Disable RPM Finder repository
   template:
     src: "RPMFinder2.repo.j2"
     dest: "/etc/yum.repos.d/rpmfinder.repo"
