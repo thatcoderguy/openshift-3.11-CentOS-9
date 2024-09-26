@@ -59,9 +59,18 @@
         - "{{ 'python3-PyYAML' if ansible_distribution != 'Fedora' else 'PyYAML' }}"
         - python3-libsemanage
         - yum-utils
-        - "{{ 'python3-docker' if ansible_distribution != 'Fedora' else 'python-docker-py' }}"
         pkg_list_non_fedora:
         pkg_list_use_non_fedora: "{{ ansible_distribution == 'Fedora' | bool }}"
         pkg_list: "{{ pkg_list_non_fedora | ternary(pkg_list_non_fedora, []) + pkg_list_temp }}"
       register: result
       until: result is succeeded
+
+  - name: Install python3-docker - dnf
+    package:
+      name: "https://kojipkgs.fedoraproject.org//packages/python-docker/7.1.0/3.fc41/noarch/python3-docker-7.1.0-3.fc41.noarch.rpm"
+      state: present
+      disable_gpg_check: true
+    register: result
+    until: result is succeeded
+
+      
