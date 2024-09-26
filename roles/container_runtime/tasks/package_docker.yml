@@ -17,6 +17,12 @@
 # Some basic checks to ensure the role will complete
 - import_tasks: docker_sanity.yml
 
+- name: Configure correct RPM Finder repository
+  template:
+    src: "RPMFinder.repo.j2"
+    dest: "/etc/yum.repos.d/rpmfinder.repo"
+  notify: refresh cache
+
 # Make sure Docker is installed, but does not update a running version.
 # Docker upgrades are handled by a separate playbook.
 # Note: The curr_docker_version.stdout check can be removed when https://github.com/ansible/ansible/issues/33187 gets fixed.
@@ -24,6 +30,8 @@
   package:
     name: "{{ pkg_list | join(',') }}"
     state: present
+    disablerepo: "*"
+    enablerepo: "rmp-finder-opensuse"
   when:
   - not (openshift_is_atomic | bool)
   register: result
@@ -33,6 +41,12 @@
     - "docker-ce"
     - atomic
     - skopeo
+
+- name: Configure correct RPM Finder repository
+  template:
+    src: "RPMFinder2.repo.j2"
+    dest: "/etc/yum.repos.d/rpmfinder.repo"
+  notify: refresh cache
 
 - block:
   # Extend the default Docker service unit file when using iptables-services
