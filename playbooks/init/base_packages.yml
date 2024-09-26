@@ -65,12 +65,22 @@
       register: result
       until: result is succeeded
 
+  - name: Enable RPM Finder repository
+    template:
+      src: "RPMFinder.repo.j2"
+      dest: "/etc/yum.repos.d/rpmfinder.repo"
+    notify: refresh cache
+
   - name: Install python3-docker - dnf
     package:
-      name: "https://kojipkgs.fedoraproject.org//packages/python-docker/7.1.0/3.fc41/noarch/python3-docker-7.1.0-3.fc41.noarch.rpm"
+      name: "{{ 'python3-docker' if ansible_distribution != 'Fedora' else 'python-docker-py' }}"
       state: present
-      disable_gpg_check: true
     register: result
     until: result is succeeded
 
+  - name: Disable RPM Finder repository
+    template:
+      src: "RPMFinder2.repo.j2"
+      dest: "/etc/yum.repos.d/rpmfinder.repo"
+    notify: refresh cache
       
