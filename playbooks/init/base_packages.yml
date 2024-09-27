@@ -75,6 +75,7 @@
     package:
       name: "{{ 'python3-docker' if ansible_distribution != 'Fedora' else 'python-docker-py' }}"
       state: latest
+      allow_downgrade: true
     register: result
     until: result is succeeded
 
