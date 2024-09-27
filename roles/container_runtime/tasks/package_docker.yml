@@ -30,8 +30,9 @@
   package:
     name: "{{ pkg_list | join(',') }}"
     state: present
-    disablerepo: "*"
-    enablerepo: "rmp-finder-opensuse"
+#    disablerepo: "*"
+#    enablerepo: "rmp-finder-opensuse"
+  allowerasing: true
   when:
   - not (openshift_is_atomic | bool)
   register: result
