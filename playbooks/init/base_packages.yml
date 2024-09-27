@@ -71,10 +71,12 @@
       dest: "/etc/yum.repos.d/rpmfinder.repo"
 #notify: refresh cache
 
+
   - name: Install python3-docker - dnf
     package:
       name: "{{ 'python3-docker' if ansible_distribution != 'Fedora' else 'python-docker-py' }}"
       state: present
+      disablerepo: "rmp-finder-opensuse"
     register: result
     until: result is succeeded
 
