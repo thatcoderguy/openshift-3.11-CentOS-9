@@ -38,6 +38,20 @@
   vars:
     pkg_list:
     - "docker-ce"
+
+- name: Install Atomic
+  package:
+    name: "{{ pkg_list | join(',') }}"
+    state: present
+    disablerepo: "*"
+    enablerepo: "centos-7-extras, rmp-finder-centos"
+  allowerasing: true
+  when:
+  - not (openshift_is_atomic | bool)
+  register: result
+  until: result is succeeded
+  vars:
+    pkg_list:
     - atomic
     - skopeo
 
