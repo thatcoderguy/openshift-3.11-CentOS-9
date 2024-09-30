@@ -3,6 +3,7 @@
   package:
     name: "{{ r_openshift_node_image_prep_packages | join(',') }}"
     state: present
+    update_only: true
   register: result
   until: result is succeeded
   when: not (openshift_is_atomic | default(False) | bool)
