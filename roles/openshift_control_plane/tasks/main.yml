@@ -43,6 +43,12 @@
     src: "node-config.yaml.j2"
     dest: "/usr/bin/openshift-node-config"
 
+- name: set permissions
+  file:
+    state: file
+    path: "/usr/bin/openshift-node-config"
+    mode: '777'    
+
 - name: Create flexvolume directory when on atomic hosts
   file:
     state: directory
