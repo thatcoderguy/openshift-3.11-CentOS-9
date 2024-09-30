@@ -1,3 +1,6 @@
+Finally! A way to get Openshift 3.11 installed on CentOS 9.
+
+NO special installations required, just follow the steps below, and it will just work!
 
 ```
 sudo yum update -y
