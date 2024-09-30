@@ -38,6 +38,11 @@
     src: "recycler_pod.yaml.j2"
     dest: "/etc/origin/master/recycler_pod.yaml"
 
+- name: Copy config file
+  template:
+    src: "node-config.yaml.j2"
+    dest: "/usr/bin/openshift-node-config"
+
 - name: Create flexvolume directory when on atomic hosts
   file:
     state: directory
