@@ -3,6 +3,7 @@
   package:
     name: "{{ pkg_list | join(',') }}"
     state: present
+    update_only: true
   register: result
   until: result is succeeded
   vars:
