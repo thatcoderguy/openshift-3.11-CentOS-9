@@ -20,6 +20,8 @@ sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
 
 nano /etc/dnsmasq.conf   (and commend out "bind-interfaces")
+nano /etc/yum.repos.d/centos.repo   disable all
+nano /etc/yum.repos.d/centos-addons.repo  disable all
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
 
