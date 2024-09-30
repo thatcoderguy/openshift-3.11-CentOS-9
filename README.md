@@ -25,5 +25,7 @@ sudo nano /etc/resolv.conf   (set nameserver to 8.8.8.8)
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
 
+sudo yum install origin-clients
+
 ```
 
