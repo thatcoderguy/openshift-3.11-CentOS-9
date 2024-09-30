@@ -8433,7 +8433,7 @@ data:
                     serviceAccountName: strimzi-cluster-operator
                     containers:
                     - name: cluster-operator
-                      image: registry.access.redhat.com/amqstreams-1-tech-preview/amqstreams10-clusteroperator-openshift:1.0.0-beta
+                      image: catalog.redhat.com/software/containers/amqstreams-1-tech-preview/amqstreams10-clusteroperator-openshift:1.0.0-beta
                       env:
                         - name: STRIMZI_NAMESPACE
                           valueFrom:
@@ -8694,7 +8694,7 @@ data:
                       command:
                       - etcd-operator
                       - --create-crd=false
-                      image: quay.io/repository/coreos/etcd-operator@sha256:bd944a211eaf8f31da5e6d69e8541e7cada8f16a9f7a5a570b22478997819943
+                      image: quay.io/coreos/etcd-operator@sha256:bd944a211eaf8f31da5e6d69e8541e7cada8f16a9f7a5a570b22478997819943
                       env:
                       - name: MY_POD_NAMESPACE
                         valueFrom:
@@ -8879,7 +8879,7 @@ data:
                       command:
                       - etcd-operator
                       - --create-crd=false
-                      image: quay.io/repository/coreos/etcd-operator@sha256:db563baa8194fcfe39d1df744ed70024b0f1f9e9b55b5923c2f3a413c44dc6b8
+                      image: quay.io/coreos/etcd-operator@sha256:db563baa8194fcfe39d1df744ed70024b0f1f9e9b55b5923c2f3a413c44dc6b8
                       env:
                       - name: MY_POD_NAMESPACE
                         valueFrom:
@@ -8890,7 +8890,7 @@ data:
                           fieldRef:
                             fieldPath: metadata.name
                     - name: etcd-backup-operator
-                      image: quay.io/repository/coreos/etcd-operator@sha256:db563baa8194fcfe39d1df744ed70024b0f1f9e9b55b5923c2f3a413c44dc6b8
+                      image: quay.io/coreos/etcd-operator@sha256:db563baa8194fcfe39d1df744ed70024b0f1f9e9b55b5923c2f3a413c44dc6b8
                       command:
                       - etcd-backup-operator
                       - --create-crd=false
@@ -8904,7 +8904,7 @@ data:
                           fieldRef:
                             fieldPath: metadata.name
                     - name: etcd-restore-operator
-                      image: quay.io/repository/coreos/etcd-operator@sha256:db563baa8194fcfe39d1df744ed70024b0f1f9e9b55b5923c2f3a413c44dc6b8
+                      image: quay.io/coreos/etcd-operator@sha256:db563baa8194fcfe39d1df744ed70024b0f1f9e9b55b5923c2f3a413c44dc6b8
                       command:
                       - etcd-restore-operator
                       - --create-crd=false
@@ -9162,7 +9162,7 @@ data:
                       command:
                       - etcd-operator
                       - --create-crd=false
-                      image: quay.io/repository/coreos/etcd-operator@sha256:c0301e4686c3ed4206e370b42de5a3bd2229b9fb4906cf85f3f30650424abec2
+                      image: quay.io/coreos/etcd-operator@sha256:c0301e4686c3ed4206e370b42de5a3bd2229b9fb4906cf85f3f30650424abec2
                       env:
                       - name: MY_POD_NAMESPACE
                         valueFrom:
@@ -9173,7 +9173,7 @@ data:
                           fieldRef:
                             fieldPath: metadata.name
                     - name: etcd-backup-operator
-                      image: quay.io/repository/coreos/etcd-operator@sha256:c0301e4686c3ed4206e370b42de5a3bd2229b9fb4906cf85f3f30650424abec2
+                      image: quay.io/coreos/etcd-operator@sha256:c0301e4686c3ed4206e370b42de5a3bd2229b9fb4906cf85f3f30650424abec2
                       command:
                       - etcd-backup-operator
                       - --create-crd=false
@@ -9187,7 +9187,7 @@ data:
                           fieldRef:
                             fieldPath: metadata.name
                     - name: etcd-restore-operator
-                      image: quay.io/repository/coreos/etcd-operator@sha256:c0301e4686c3ed4206e370b42de5a3bd2229b9fb4906cf85f3f30650424abec2
+                      image: quay.io/coreos/etcd-operator@sha256:c0301e4686c3ed4206e370b42de5a3bd2229b9fb4906cf85f3f30650424abec2
                       command:
                       - etcd-restore-operator
                       - --create-crd=false
