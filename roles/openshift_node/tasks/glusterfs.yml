@@ -3,6 +3,7 @@
   package:
     name: glusterfs-fuse{{ glusterfs_fuse_version }}
     state: present
+    updateonly: true
   when: not (openshift_is_atomic | default(False) | bool)
   register: result
   until: result is succeeded
