@@ -98,7 +98,7 @@ options:
   images:
     description:
     - The image to base this registry on - ${component} will be replaced with --type
-    required: 'registry.redhat.io/openshift3/ose-${component}:${version}'
+    required: 'registry.access.redhat.com/openshift3/ose-${component}:${version}'
     default: None
     aliases: []
   latest_images:
@@ -204,7 +204,7 @@ EXAMPLES = '''
     replicas: 2
     namespace: default
     selector: type=infra
-    images: "registry.redhat.io/openshift3/ose-${component}:${version}"
+    images: "registry.access.redhat.com/openshift3/ose-${component}:${version}"
     env_vars:
       REGISTRY_CONFIGURATION_PATH: /etc/registryconfig/config.yml
       REGISTRY_HTTP_TLS_CERTIFICATE: /etc/secrets/registry.crt

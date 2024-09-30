@@ -45,7 +45,7 @@
             },
             "from": {
               "kind": "DockerImage",
-              "name": "registry.redhat.io/rhscl/httpd-24-rhel7"
+              "name": "registry.access.redhat.com/rhscl/httpd-24-rhel7"
             },
             "name": "2.4",
             "referencePolicy": {
@@ -94,7 +94,7 @@
             },
             "from": {
               "kind": "DockerImage",
-              "name": "registry.redhat.io/openshift3/jenkins-2-rhel7:v3.11"
+              "name": "registry.access.redhat.com/openshift3/jenkins-2-rhel7:v3.11"
             },
             "name": "2",
             "referencePolicy": {
@@ -143,7 +143,7 @@
             },
             "from": {
               "kind": "DockerImage",
-              "name": "registry.redhat.io/rhscl/mariadb-102-rhel7:latest"
+              "name": "registry.access.redhat.com/rhscl/mariadb-102-rhel7:latest"
             },
             "name": "10.2",
             "referencePolicy": {
@@ -192,7 +192,7 @@
             },
             "from": {
               "kind": "DockerImage",
-              "name": "registry.redhat.io/rhscl/mongodb-36-rhel7:latest"
+              "name": "registry.access.redhat.com/rhscl/mongodb-36-rhel7:latest"
             },
             "name": "3.6",
             "referencePolicy": {
