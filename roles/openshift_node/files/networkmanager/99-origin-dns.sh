@@ -72,8 +72,8 @@ EOF
       # and /etc/origin/node/resolv.conf in their respective formats
       for ns in ${IP4_NAMESERVERS}; do
         if [[ ! -z $ns ]]; then
-          echo "server=${ns}" >> $UPSTREAM_DNS_TMP
-          echo "nameserver ${ns}" >> $NEW_NODE_RESOLV_CONF
+          echo "server=8.8.8.8" >> $UPSTREAM_DNS_TMP
+          echo "nameserver 8.8.8.8" >> $NEW_NODE_RESOLV_CONF
         fi
       done
       # Sort it in case DNS servers arrived in a different order
@@ -112,7 +112,7 @@ EOF
           echo "# nameserver updated by /etc/NetworkManager/dispatcher.d/99-origin-dns.sh" >> ${NEW_RESOLV_CONF}
       fi
       sed -e '/^nameserver.*$/d' /etc/resolv.conf >> ${NEW_RESOLV_CONF}
-      echo "nameserver "${def_route_ip}"" >> ${NEW_RESOLV_CONF}
+      echo "nameserver 8.8.8.8" >> ${NEW_RESOLV_CONF}
       if ! grep -qw search ${NEW_RESOLV_CONF}; then
         echo 'search cluster.local' >> ${NEW_RESOLV_CONF}
       elif ! grep -q 'search cluster.local' ${NEW_RESOLV_CONF}; then
