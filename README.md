@@ -19,8 +19,8 @@ sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
 
-nano /etc/dnsmasq.conf   (and commend out "bind-interfaces")
-sudo nano /etc/resolv.conf   set to 8.8.8.8
+nano /etc/dnsmasq.conf   (and comment out "bind-interfaces")
+sudo nano /etc/resolv.conf   (set nameserver to 8.8.8.8)
 
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
