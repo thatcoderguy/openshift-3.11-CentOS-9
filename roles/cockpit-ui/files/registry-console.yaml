@@ -91,7 +91,7 @@ objects:
 parameters:
   - description: 'Specify fully qualified image name and version; e.g. for "registry.redhat.io/openshift3/registry-console:v3.11"'
     name: IMAGE_NAME
-    value: "openshift3/registry-console:latest"
+    value: "openshift3/registry-console/580a32536017d9328b5792da:latest"
   - description: "The public URL for the Openshift OAuth Provider, e.g. https://openshift.example.com:8443"
     name: OPENSHIFT_OAUTH_PROVIDER_URL
     required: true
