@@ -15,7 +15,7 @@ l_openshift_cockit_search_dict:
 l_openshift_cockit_search: "{{ l_openshift_cockit_search_dict[openshift_deployment_type] }}"
 
 l_openshift_cockpit_replace_dict:
-  origin: "openshift3/registry-console/580a32536017d9328b5792da"
+  origin: "openshift3/registry-console"
   openshift-enterprise: "registry-console"
 l_openshift_cockpit_replace: "{{ l_openshift_cockpit_replace_dict[openshift_deployment_type] }}"
 
