@@ -30,7 +30,6 @@
   package:
     name: "{{ pkg_list | join(',') }}"
     state: present
-  allowerasing: true
   when:
   - not (openshift_is_atomic | bool)
   register: result
@@ -45,7 +44,7 @@
     state: present
     disablerepo: "*"
     enablerepo: "centos-7-extras, rmp-finder-centos"
-  allowerasing: true
+    allowerasing: true
   when:
   - not (openshift_is_atomic | bool)
   register: result
