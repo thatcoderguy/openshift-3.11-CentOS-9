@@ -20,34 +20,24 @@ imageConfig:
   latest: false
 iptablesSyncPeriod: "{{ openshift_node_iptables_sync_period }}"
 kubeletArguments:
-{% if openshift_is_atomic | bool %}
+
   volume-plugin-dir:
   - "/etc/origin/kubelet-plugins/volume/exec"
-{% endif %}
+
   pod-manifest-path:
   - /etc/origin/node/pods
   bootstrap-kubeconfig:
   - /etc/origin/node/bootstrap.kubeconfig
   feature-gates:
   - RotateKubeletClientCertificate=true,RotateKubeletServerCertificate=true
-{% if openshift_node_group_use_persistentlocalvolumes | bool %}
   - PersistentLocalVolumes=true
   - VolumeScheduling=true
-{% endif %}
   rotate-certificates:
   - "true"
   cert-dir:
   - /etc/origin/node/certificates
-{% if openshift_node_group_cloud_provider != '' %}
-  cloud-config:
-  - /etc/origin/cloudprovider/{{ openshift_node_group_cloud_provider }}.conf
-  cloud-provider:
-  - {{ openshift_node_group_cloud_provider }}
-{% endif %}
-{% if l_openshift_node_group_labels != [] %}
-  node-labels:
-  - < this is always modified via yedit: openshift_node_labels_edit >
-{% endif %}
+
+
   enable-controller-attach-detach:
   - 'true'
   runtime-cgroups:
@@ -74,8 +64,4 @@ volumeConfig:
   localQuota:
     perFSGroup: null
 volumeDirectory: {{ openshift_node_group_node_data_dir }}/openshift.local.volumes
-{% if (openshift_node_group_cloud_provider | default('', true) == 'azure') and
-      (openshift_kubelet_name_override | default('', true) != '') and
-      (not openshift_node_group_configmap | default(false) | bool) %}
-nodeName: {{ l_kubelet_node_name }}
-{% endif %}
+
