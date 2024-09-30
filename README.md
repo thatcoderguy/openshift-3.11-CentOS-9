@@ -19,12 +19,20 @@ sudo yum install https://rpmfind.net/linux/centos-stream/9-stream/BaseOS/x86_64/
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
 
-nano /etc/dnsmasq.conf   (and comment out "bind-interfaces")
+sudo nano /etc/dnsmasq.conf   (and comment out "bind-interfaces")
 sudo nano /etc/resolv.conf   (set nameserver to 8.8.8.8)
 sudo yum install origin-clients
 
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
 
+sudo nano /etc/docker/daemon.json
+
+{
+        "insecure-registries" : [ "172.30.0.0/16", "172.17.0.0/16", "172.18.0.0/16" ],
+        "dns": ["8.8.8.8", "8.8.4.4"]
+}
+
+sudo systemctl restart docker
 
 
 ```
