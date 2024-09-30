@@ -132,8 +132,8 @@
                     },
                     {
                         "names": [
-                            "quay.io/coreos/etcd@sha256:43fbc8a457aa0cb887da63d74a48659e13947cb74b96a53ba8f47abb6172a948",
-                            "quay.io/coreos/etcd:v3.2.22"
+                            "quay.io/repository/coreos/etcd@sha256:43fbc8a457aa0cb887da63d74a48659e13947cb74b96a53ba8f47abb6172a948",
+                            "quay.io/repository/coreos/etcd:v3.2.22"
                         ],
                         "sizeBytes": 37269372
                     }

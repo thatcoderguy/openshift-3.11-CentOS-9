@@ -652,7 +652,7 @@ def lib_utils_oo_oreg_image(image_default, oreg_url):
     '''Converts default image string to utilize oreg_url, if defined.
        oreg_url should be passed in as string "None" if undefined.
 
-       Example input:  "quay.io/coreos/etcd:v99",
+       Example input:  "quay.io/crepository/oreos/etcd:v99",
                        "example.com/openshift/origin-${component}:${version}"
        Example output: "example.com/coreos/etcd:v99"'''
     # if no oreg_url is specified, we just return the original default

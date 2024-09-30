@@ -12,7 +12,7 @@ import oo_filters   # noqa: E402
 
 
 def test_lib_utils_oo_oreg_image():
-    default_url = "quay.io/coreos/etcd:v99"
+    default_url = "quay.io/crepository/oreos/etcd:v99"
 
     oreg_url = "None"
     output_image = oo_filters.lib_utils_oo_oreg_image(default_url, oreg_url)

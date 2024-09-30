@@ -145,7 +145,7 @@ contiv_etcd_peer_port_proto: tcp
 contiv_etcd_url: "http://127.0.0.1:{{ contiv_etcd_port }}"
 contiv_etcd_init_image_repo: ferest/etcd-initer
 contiv_etcd_init_image_tag: latest
-contiv_etcd_image_repo: quay.io/coreos/etcd
+contiv_etcd_image_repo: quay.io/repository/coreos/etcd
 contiv_etcd_image_tag: v3.2.4
 contiv_etcd_conf_dir: /etc/contiv-etcd
 contiv_etcd_data_dir: /var/lib/contiv-etcd

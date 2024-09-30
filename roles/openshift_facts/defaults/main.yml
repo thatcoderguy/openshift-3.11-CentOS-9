@@ -7,7 +7,7 @@ system_images_registry_dict:
 system_images_registry: "{{ system_images_registry_dict[openshift_deployment_type | default('origin')] }}"
 
 l_default_registry_url_dict:
-  origin: 'quay.io/openshift/origin-${component}:${version}'
+  origin: 'quay.io/repository/openshift/origin-${component}:${version}'
   openshift-enterprise: 'registry.redhat.io/openshift3/ose-${component}:${version}'
 openshift_facts_default_registry_url: "{{ l_default_registry_url_dict[openshift_deployment_type] }}"
 
