@@ -44,7 +44,7 @@
     state: present
     disablerepo: "*"
     enablerepo: "centos-7-extras, rmp-finder-centos"
-    allowerasing: true
+    update_only: true
   when:
   - not (openshift_is_atomic | bool)
   register: result
